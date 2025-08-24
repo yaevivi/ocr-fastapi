@@ -9,7 +9,9 @@ from typing import List
 app = FastAPI(title="EasyOCR API", description="OCR service using EasyOCR", version="1.0")
 
 # Crear el lector con soporte multilenguaje y GPU si está disponible
-reader = easyocr.Reader(['en', 'es'], gpu=True)
+reader = easyocr.Reader(['es'], gpu=False)
+
+
 
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
